@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
+import TodoPage from "./TodoPage"
+
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TodoPage />
     </div>
   );
 }
 
 export default App;
+
+
+// TODO TASKS:
+
+// Create deleting the todo tasks from the state and display the remaining on the page
+// Adding search to the list(using filter)
