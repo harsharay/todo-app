@@ -16,19 +16,21 @@ const TodoPage = () => {
     },[state.todoItems])
 
     const handleClick = () => {
-        setState(prevVal => {
-            return {
-                ...prevVal,
-                todoItems : [...state.todoItems , state.inputValue]
-            }
-            
-        })
-        setState(prevVal => {
-            return {
-                ...prevVal,
-                inputValue : ""
-            }
-        })
+        if(state.inputValue.length > 0){
+            setState(prevVal => {
+                return {
+                    ...prevVal,
+                    todoItems : [...state.todoItems , state.inputValue]
+                }
+                
+            })
+            setState(prevVal => {
+                return {
+                    ...prevVal,
+                    inputValue : ""
+                }
+            })
+        }
     }
 
     const handleChange = e => {
